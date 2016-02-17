@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // Create Machinery
+   retrievePlant();
     $("#formSubmit").click(function() {
         $.post("http://localhost:8080/PharmaMachinery/submit", {
             machineName: $('#machineryName').val(),
@@ -46,6 +46,7 @@ $(document).ready(function() {
                 });
 
    
+   function retrievePlant(){
     // Retrieves and dusplays all plants
     $.ajax({
         url: "http://localhost:8080/PharmaMachinery/retrievalMachinery/retrievePlant",
@@ -65,7 +66,7 @@ $(document).ready(function() {
                         console.log('Failed to load data');   
                     }
                 });
-
+}
 
     // Register User
 
